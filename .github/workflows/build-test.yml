@@ -56,6 +56,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     needs: [create_release]
     strategy:
+        fail-fast: false
         matrix:
             os: [ubuntu-22.04, windows-latest, macOS-latest]
 
