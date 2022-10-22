@@ -79,7 +79,7 @@ jobs:
       if: runner.os != 'Windows'
 
     - name: Setup Intel Fortran
-      uses: w-bonelli/install-intelfortran-action@v1.0.2
+      uses: w-bonelli/install-intelfortran-action@v1.0.3
   
     - name: download pre-built VTK static library
       uses: suisei-cn/actions-download-file@v1.0.1
