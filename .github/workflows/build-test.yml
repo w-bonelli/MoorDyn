@@ -81,7 +81,7 @@ jobs:
 
     - name: Setup Intel Fortran (Windows)
       if: runner.os == 'Windows'
-      uses: w-bonelli/install-intelfortran-action@v1.0.3
+      uses: modflowpy/install-intelfortran-action@v1
   
     - name: download pre-built VTK static library
       uses: suisei-cn/actions-download-file@v1.0.1
