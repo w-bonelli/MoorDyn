@@ -79,7 +79,8 @@ jobs:
         compiler: gcc
       if: runner.os != 'Windows'
 
-    - name: Setup Intel Fortran
+    - name: Setup Intel Fortran (Windows)
+      if: runner.os == 'Windows'
       uses: w-bonelli/install-intelfortran-action@v1.0.3
   
     - name: download pre-built VTK static library
