@@ -81,13 +81,8 @@ jobs:
 
     - name: Setup Intel Fortran (Windows)
       if: runner.os == 'Windows'
-      uses: modflowpy/install-intelfortran-action@v1
+      uses: w-bonelli/install-intelfortran-action@v1.0.4
     
-    - name: Set full ifort path
-      if: runner.os == 'Windows'
-      run: |
-        echo "FC=$INTEL_COMPILER_BIN_PATH/ifort.exe" >> $GITHUB_ENV
-  
     - name: download pre-built VTK static library
       uses: suisei-cn/actions-download-file@v1.0.1
       with:
