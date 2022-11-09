@@ -108,7 +108,7 @@ jobs:
     - name: Configure CMake (Windows)
       if: runner.os == 'Windows'
       run: |
-        cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/install -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -DEXTERNAL_EIGEN:BOOL=OFF -DPYTHON_WRAPPER:BOOL=OFF -DFORTRAN_WRAPPER=ON -DUSE_VTK=ON -DVTK_DIR=${{github.workspace}}/vtk/lib/cmake/vtk-${{env.VTK_VERSION_MAJOR}}.${{env.VTK_VERSION_MINOR}}/ -DBUILD_TESTING=OFF -DCMAKE_Fortran_COMPILER="C:\Program Files (x86)\Intel\oneAPI\compiler\2022.2.0\windows\bin\intel64\ifort.exe"
+        cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/install -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -DEXTERNAL_EIGEN:BOOL=OFF -DPYTHON_WRAPPER:BOOL=OFF -DFORTRAN_WRAPPER=ON -DUSE_VTK=ON -DVTK_DIR=${{github.workspace}}/vtk/lib/cmake/vtk-${{env.VTK_VERSION_MAJOR}}.${{env.VTK_VERSION_MINOR}}/ -DBUILD_TESTING=OFF -DCMAKE_Fortran_COMPILER="C:/Program Files (x86)/Intel/oneAPI/compiler/2022.2.0/windows/bin/intel64/ifort.exe"
       
     - name: Read CMake logs (Windows)
       if: runner.os == 'Windows'
